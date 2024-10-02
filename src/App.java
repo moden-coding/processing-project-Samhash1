@@ -24,11 +24,13 @@ public class App extends PApplet {
     float topPaddleY;
     float paddleSpeed = 8;
     boolean moveLeft, moveRight, moveADLeft, moveADRight;
-
+    float slope = random(0.5f,5);
+    float moveX = Math.sqrt(speed.speed/(1+ slope.slope));
+    float moveY = slope.moveX; 
     public void settings() {
         size(1200, 800);
     }
-
+   
     public void setup() {
         resetGame();
         buttonX = width / 2 - buttonWidth / 2;
